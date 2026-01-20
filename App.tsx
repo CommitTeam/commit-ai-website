@@ -1,6 +1,6 @@
 
 import React, { useState, useEffect } from 'react';
-import { BrowserRouter, Routes, Route, useNavigate } from 'react-router-dom';
+import { HashRouter, Routes, Route, useNavigate } from 'react-router-dom';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { Marquee } from './components/Marquee';
@@ -127,9 +127,9 @@ const Layout: React.FC = () => {
 };
 
 const App: React.FC = () => (
-  <BrowserRouter>
+  <HashRouter>
     <Layout />
-  </BrowserRouter>
+  </HashRouter>
 );
 
 export default App;
