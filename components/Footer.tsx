@@ -1,6 +1,7 @@
+
 import React from 'react';
-import { Flame } from 'lucide-react';
-import { NeoButton } from './ui/NeoButton';
+import { Mail } from 'lucide-react';
+import { Logo } from './ui/Logo';
 
 interface FooterProps {
   onNavigate?: (page: string) => void;
@@ -8,43 +9,35 @@ interface FooterProps {
 
 export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
   return (
-    <footer className="bg-black text-white py-16 px-6 border-t-4 border-brand-yellow">
-      <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-12 text-center md:text-left">
-        
-        <div>
-          <div 
-            className="flex items-center gap-2 justify-center md:justify-start mb-6 cursor-pointer"
+    <footer className="bg-white text-black py-20 px-6 border-t border-black/5">
+      <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start gap-12">
+
+        <div className="text-center md:text-left">
+          <div
+            className="mb-8 cursor-pointer flex justify-center md:justify-start"
             onClick={() => onNavigate?.('home')}
           >
-            <div className="bg-brand-yellow text-black p-1 rounded-full border-2 border-white">
-              <Flame size={24} fill="#000" />
-            </div>
-            <div className="flex items-center tracking-tighter">
-              <span className="text-3xl font-black italic">COMMIT</span>
-              <span className="bg-brand-yellow text-black px-1 ml-1 text-3xl font-black italic rounded-sm">AI</span>
-            </div>
+            <Logo size="md" showTagline className="!items-start" />
           </div>
-          <p className="font-mono text-gray-400 max-w-sm mb-2">
-            YOU VS WHO
-          </p>
-          <p className="font-mono text-gray-500 max-w-sm text-sm">
-            The fitness app for people who hate fitness apps but love winning.
+          <p className="font-bold text-gray-400 max-w-sm text-sm leading-relaxed mx-auto md:mx-0">
+            The social fitness arena for people who hate fitness apps but love winning. Effort verified by AI.
           </p>
         </div>
 
-        <div className="flex flex-col items-center md:items-end gap-6">
-          
-          <div className="flex flex-col sm:flex-row gap-4 w-full">
-            <input 
-              type="email" 
-              placeholder="ENTER YOUR EMAIL" 
-              className="px-4 py-3 bg-gray-900 border-2 border-gray-700 rounded-lg font-mono text-white focus:border-brand-yellow outline-none w-full md:w-64"
-            />
-            <NeoButton variant="primary">
-              GET EARLY ACCESS
-            </NeoButton>
+        <div className="flex flex-col items-center md:items-end gap-8 w-full md:w-auto">
+
+          <div className="flex flex-wrap justify-center md:justify-end gap-x-8 gap-y-4">
+            <button 
+              onClick={() => window.location.href = 'mailto:contact@icommit.ai'}
+              className="text-[11px] font-black uppercase tracking-widest text-gray-400 hover:text-black transition-colors flex items-center gap-2"
+            >
+              <Mail size={14} /> CONTACT
+            </button>
+            <button onClick={() => onNavigate?.('privacy')} className="text-[11px] font-black uppercase tracking-widest text-gray-400 hover:text-black transition-colors">PRIVACY</button>
+            <button onClick={() => onNavigate?.('terms')} className="text-[11px] font-black uppercase tracking-widest text-gray-400 hover:text-black transition-colors">TERMS</button>
           </div>
-          <p className="text-xs font-mono text-gray-500">© 2024 COMMIT AI INC. ALL BETS ARE FINAL.</p>
+
+          <p className="text-[10px] font-bold text-gray-300 uppercase tracking-widest">© 2024 COMO INC. ALL BETS ARE FINAL.</p>
         </div>
 
       </div>

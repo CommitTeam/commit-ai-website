@@ -1,32 +1,37 @@
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Commit AI - Bet on Sweat</title>
+    <title>COMO - You vs. Who?</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
     <script>
       tailwind.config = {
         theme: {
           extend: {
             fontFamily: {
               sans: ['Inter', 'sans-serif'],
-              mono: ['JetBrains Mono', 'monospace'],
             },
             colors: {
               brand: {
                 yellow: '#FFF500',
                 orange: '#FF5C00',
-                blue: '#3B82F6',
                 black: '#121212',
+                charcoal: '#3D3935',
                 gray: '#F3F4F6',
               }
             },
-            boxShadow: {
-              'neo': '5px 5px 0px 0px rgba(0,0,0,1)',
-              'neo-sm': '3px 3px 0px 0px rgba(0,0,0,1)',
-              'neo-lg': '8px 8px 0px 0px rgba(0,0,0,1)',
+            animation: {
+              'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+              'float': 'float 6s ease-in-out infinite',
+            },
+            keyframes: {
+              float: {
+                '0%, 100%': { transform: 'translateY(0)' },
+                '50%': { transform: 'translateY(-20px)' },
+              }
             }
           }
         }
@@ -36,15 +41,33 @@
       body {
         background-color: #F3F4F6;
         color: #121212;
+        overflow-x: hidden;
       }
-      /* Hide scrollbar for chrome/safari/opera */
-      .no-scrollbar::-webkit-scrollbar {
-        display: none;
+      
+      /* Grain Texture Overlay */
+      body::before {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url("https://grainy-gradients.vercel.app/noise.svg");
+        opacity: 0.04;
+        pointer-events: none;
+        z-index: 9999;
       }
-      /* Hide scrollbar for IE, Edge and Firefox */
-      .no-scrollbar {
-        -ms-overflow-style: none;  /* IE and Edge */
-        scrollbar-width: none;  /* Firefox */
+
+      .no-scrollbar::-webkit-scrollbar { display: none; }
+      .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+      ::selection {
+        background: #FFF500;
+        color: #000;
+      }
+
+      .glow-yellow {
+        box-shadow: 0 0 40px rgba(255, 245, 0, 0.3);
       }
     </style>
 
@@ -60,7 +83,7 @@
   }
 }
 </script>
-  <script type="module" crossorigin src="/assets/index-BTdRg0Pf.js"></script>
+  <script type="module" crossorigin src="/assets/index-BdgY7xvv.js"></script>
 </head>
   <body>
     <div id="root"></div>

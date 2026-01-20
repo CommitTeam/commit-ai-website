@@ -1,54 +1,56 @@
+
 import React from 'react';
 import { motion } from 'framer-motion';
-import { BarChart2, Users, Trophy } from 'lucide-react';
+import { Zap, Users, Trophy } from 'lucide-react';
 
 const Card = ({ title, desc, icon, delay }: { title: string, desc: string, icon: React.ReactNode, delay: number }) => (
   <motion.div
-    initial={{ opacity: 0, y: 30 }}
+    initial={{ opacity: 0, y: 20 }}
     whileInView={{ opacity: 1, y: 0 }}
     viewport={{ once: true }}
     transition={{ delay, duration: 0.5 }}
-    className="bg-white border-2 border-black rounded-xl p-8 shadow-neo hover:shadow-neo-lg transition-all"
+    className="bg-white border border-black/5 rounded-[2.5rem] p-10 shadow-sm hover:shadow-xl transition-all group"
   >
-    <div className="w-12 h-12 bg-brand-yellow border-2 border-black rounded-lg flex items-center justify-center mb-6">
+    <div className="w-14 h-14 bg-gray-50 rounded-2xl flex items-center justify-center mb-8 border border-black/5 group-hover:bg-brand-yellow transition-colors">
       {icon}
     </div>
-    <h3 className="font-black text-2xl mb-4 uppercase">{title}</h3>
-    <p className="font-mono text-gray-600 leading-relaxed">{desc}</p>
+    <h3 className="font-black text-2xl mb-4 italic uppercase tracking-tighter">{title}</h3>
+    <p className="font-bold text-gray-500 leading-relaxed text-sm">{desc}</p>
   </motion.div>
 );
 
 export const Philosophy: React.FC = () => {
   return (
-    <section id="philosophy" className="py-24 px-6 bg-white relative border-b-2 border-black">
+    <section id="philosophy" className="py-32 px-6 bg-[#F3F4F6] relative">
       <div className="max-w-6xl mx-auto">
-        <div className="mb-16 max-w-3xl">
-          <h2 className="text-5xl font-black mb-6 uppercase leading-none">
-            Why another <br/> fitness app?
+        <div className="mb-20 text-center max-w-3xl mx-auto">
+          <h2 className="text-4xl md:text-5xl font-black mb-6 uppercase italic tracking-tighter leading-none">
+            BET ON <span className="text-brand-yellow underline decoration-black decoration-2 underline-offset-4">YOURSELF.</span>
           </h2>
-          <p className="text-xl font-bold text-gray-500">
-            Because looking at graphs alone in your room sucks. We built Commit AI because the fitness industry tries to sell you data, but the real motivation lies in your community.
+          <p className="text-lg font-bold text-gray-400">
+            We're swapping boring graphs for high-stakes social competition. 
+            COMO is where community verification meets fitness motivation.
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <Card 
-            title="Less Data, More Drama" 
-            desc="Stop obsessing over heart rate variability. Start obsessing over whether Mike is actually going to do those burpees he promised."
-            icon={<BarChart2 className="text-black" />}
+            title="Drama over Data" 
+            desc="Instead of heart rates, we track heart beats — yours and your friends' as the timer runs down on a high-stakes workout."
+            icon={<Zap className="text-black" />}
             delay={0}
           />
           <Card 
-            title="Social Accountability" 
-            desc="It's harder to skip a workout when 5 of your friends have money riding on your success. Stakes make it stick."
+            title="Proof in Motion" 
+            desc="Our AI verify engine ensures that every rep counts. No cheating, just pure calibrated effort verified in real-time."
             icon={<Users className="text-black" />}
-            delay={0.2}
+            delay={0.1}
           />
           <Card 
-            title="Earn While You Burn" 
-            desc="Win points for working out. Win points for predicting outcomes. Redeem for exclusive gear and bragging rights."
+            title="The Splurge" 
+            desc="Earn points for wins, streaks, and smart predictions. Redeem them for exclusive gear in our shop."
             icon={<Trophy className="text-black" />}
-            delay={0.4}
+            delay={0.2}
           />
         </div>
       </div>

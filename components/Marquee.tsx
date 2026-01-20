@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { motion } from 'framer-motion';
 
@@ -9,15 +10,16 @@ interface MarqueeProps {
 
 export const Marquee: React.FC<MarqueeProps> = ({ text, direction = 'left', className = '' }) => {
   return (
-    <div className={`overflow-hidden whitespace-nowrap border-y-2 border-black bg-brand-yellow py-3 ${className}`}>
+    <div className={`overflow-hidden whitespace-nowrap bg-brand-yellow py-6 ${className} flex items-center`}>
       <motion.div
-        className="inline-block font-mono font-black text-2xl uppercase tracking-widest"
+        className="inline-block font-black text-4xl md:text-6xl uppercase italic tracking-tighter"
         animate={{ x: direction === 'left' ? ["0%", "-50%"] : ["-50%", "0%"] }}
-        transition={{ repeat: Infinity, duration: 20, ease: "linear" }}
+        transition={{ repeat: Infinity, duration: 30, ease: "linear" }}
       >
         {[...Array(10)].map((_, i) => (
-          <span key={i} className="mx-8">
+          <span key={i} className="mx-12 inline-flex items-center gap-8">
             {text}
+            <div className="w-4 h-4 rounded-full bg-black"></div>
           </span>
         ))}
       </motion.div>

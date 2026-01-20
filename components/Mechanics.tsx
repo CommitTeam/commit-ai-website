@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { BettingWidget } from './BettingWidget';
 import { Scan, ShieldCheck } from 'lucide-react';
@@ -36,14 +37,6 @@ export const Mechanics: React.FC = () => {
               <p>No wearables needed. Just point your camera and move.</p>
             </li>
           </ul>
-
-          <motion.div 
-            className="mt-12 p-6 bg-white border-2 border-black rounded-xl shadow-neo relative"
-            whileHover={{ y: -5 }}
-          >
-             <p className="font-black text-lg mb-2">"Is it actually accurate?"</p>
-             <p className="text-gray-600">Try the simulation on the right. We track key skeletal points to verify reps instantly.</p>
-          </motion.div>
         </div>
 
         <div className="relative z-10">
