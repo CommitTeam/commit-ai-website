@@ -66,12 +66,6 @@ export const Navbar: React.FC<NavbarProps> = ({ onJoinBetaClick, onNavigate }) =
             MECHANICS
           </button>
           <button
-            onClick={() => handleNavigate('arena')}
-            className="block w-full text-left font-bold text-sm tracking-widest text-gray-500 hover:text-black transition-colors py-2"
-          >
-            ARENA
-          </button>
-          <button
             onClick={() => window.location.href = 'mailto:contact@icommit.ai'}
             className="block w-full text-left font-bold text-sm tracking-widest text-gray-500 hover:text-black transition-colors py-2"
           >
