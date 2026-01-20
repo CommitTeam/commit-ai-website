@@ -58,9 +58,9 @@ const Router = () => {
         return (
           <main>
             <Hero />
-            
-            <Marquee 
-              text="DON'T JUST WATCH • BET • WIN • SWEAT • REPEAT •" 
+
+            <Marquee
+              text="DON'T JUST WATCH • BET • WIN • SWEAT • REPEAT"
               className="rotate-[-1deg] scale-105 my-24 border-y-4 border-black z-20"
             />
 
@@ -81,7 +81,7 @@ const Router = () => {
                  <p className="font-mono text-gray-400 tracking-[0.3em] uppercase">- Early Beta Tester</p>
               </div>
             </div>
-            
+
             <Mechanics />
 
             <Marquee

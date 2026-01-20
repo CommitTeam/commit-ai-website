@@ -19,7 +19,6 @@ export const Marquee: React.FC<MarqueeProps> = ({ text, direction = 'left', clas
         {[...Array(10)].map((_, i) => (
           <span key={i} className="mx-12 inline-flex items-center gap-8">
             {text}
-            <div className="w-4 h-4 rounded-full bg-black"></div>
           </span>
         ))}
       </motion.div>

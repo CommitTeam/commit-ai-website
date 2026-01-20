@@ -30,7 +30,6 @@ export const Navbar: React.FC<NavbarProps> = ({ onJoinBetaClick, onNavigate }) =
         <div className="hidden md:flex gap-10 items-center font-bold text-[11px] tracking-widest text-gray-500">
           <button onClick={() => handleNavigate('philosophy')} className="hover:text-black transition-colors">PHILOSOPHY</button>
           <button onClick={() => handleNavigate('mechanics')} className="hover:text-black transition-colors">MECHANICS</button>
-          <button onClick={() => handleNavigate('arena')} className="hover:text-black transition-colors">ARENA</button>
           <button onClick={() => window.location.href = 'mailto:contact@icommit.ai'} className="hover:text-black transition-colors">CONTACT</button>
         </div>
 
