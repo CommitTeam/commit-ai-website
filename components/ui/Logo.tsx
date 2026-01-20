@@ -24,11 +24,6 @@ export const Logo: React.FC<LogoProps> = ({ className = '', showTagline = false,
         alt="COMO"
         className={`${current.height} w-auto object-contain`}
       />
-      {showTagline && (
-        <p className={`font-semibold text-[#3D3935] tracking-tight ${current.taglineSpacing} ${current.tagline}`}>
-          You vs. Who?
-        </p>
-      )}
     </div>
   );
 };

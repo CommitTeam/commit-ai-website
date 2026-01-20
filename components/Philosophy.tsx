@@ -25,29 +25,29 @@ export const Philosophy: React.FC = () => {
       <div className="max-w-6xl mx-auto">
         <div className="mb-20 text-center max-w-3xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-black mb-6 uppercase italic tracking-tighter leading-none">
-            BET ON <span className="text-brand-yellow underline decoration-black decoration-2 underline-offset-4">YOURSELF.</span>
+            BET ON <span className="text-black bg-brand-yellow/70 px-3 py-1 rounded-lg inline-block shadow-[0_10px_30px_rgba(0,0,0,0.15)]">YOURSELF.</span>
           </h2>
           <p className="text-lg font-bold text-gray-400">
-            We're swapping boring graphs for high-stakes social competition. 
+            We're swapping boring graphs for high-stakes social competition.
             COMO is where community verification meets fitness motivation.
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <Card 
-            title="Drama over Data" 
+          <Card
+            title="Drama over Data"
             desc="Instead of heart rates, we track heart beats — yours and your friends' as the timer runs down on a high-stakes workout."
             icon={<Zap className="text-black" />}
             delay={0}
           />
-          <Card 
-            title="Proof in Motion" 
+          <Card
+            title="Proof in Motion"
             desc="Our AI verify engine ensures that every rep counts. No cheating, just pure calibrated effort verified in real-time."
             icon={<Users className="text-black" />}
             delay={0.1}
           />
-          <Card 
-            title="The Splurge" 
+          <Card
+            title="The Splurge"
             desc="Earn points for wins, streaks, and smart predictions. Redeem them for exclusive gear in our shop."
             icon={<Trophy className="text-black" />}
             delay={0.2}
