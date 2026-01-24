@@ -167,7 +167,7 @@ export const DeleteAccount: React.FC = () => {
                     Your account and associated data will be deleted within{" "}
                     <span className="text-black underline">24 hours</span> after
                     verification. If you prefer immediate action, you can delete
-                    your account directly from the settings menu inside the COMO
+                    your account directly from the Profile section inside the COMO
                     app.
                   </p>
                 </div>
