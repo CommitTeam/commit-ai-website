@@ -1,6 +1,6 @@
 
 import React, { useState, useEffect } from 'react';
-import { BrowserRouter, Routes, Route, useNavigate } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, useNavigate, useLocation } from 'react-router-dom';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { Marquee } from './components/Marquee';
@@ -12,6 +12,7 @@ import { LaunchingSoonModal } from './components/LaunchingSoonModal';
 import { Zap } from 'lucide-react';
 import { Privacy } from './components/Privacy';
 import { Terms } from './components/Terms';
+import { DeleteAccount } from './components/DeleteAccount';
 import { Logo } from './components/ui/Logo';
 import { AppDownloadButtons } from './components/AppDownloadButtons';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -72,6 +73,8 @@ const MechanicsPage: React.FC = () => <Mechanics />;
 
 const Layout: React.FC = () => {
   const navigate = useNavigate();
+  const location = useLocation();
+ 
   const [isBetaModalOpen, setIsBetaModalOpen] = useState(false);
   const [isLaunchingModalOpen, setIsLaunchingModalOpen] = useState(false);
   const [showSplash, setShowSplash] = useState(true);
@@ -86,6 +89,10 @@ const Layout: React.FC = () => {
     navigate(path);
     window.scrollTo(0, 0);
   };
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, [location.pathname]);
 
   return (
     <div className="min-h-screen bg-[#F3F4F6] text-black font-sans selection:bg-brand-yellow selection:text-black">
@@ -118,6 +125,7 @@ const Layout: React.FC = () => {
             <Route path="/terms" element={<TermsPage />} />
             <Route path="/philosophy" element={<PhilosophyPage />} />
             <Route path="/mechanics" element={<MechanicsPage />} />
+            <Route path="/deleteAccount" element={<DeleteAccount />} />
           </Routes>
           <Footer />
         </motion.div>

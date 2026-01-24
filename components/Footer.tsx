@@ -33,6 +33,12 @@ export const Footer: React.FC = () => {
             </a>
             <Link to="/privacy" className="text-[11px] font-black uppercase tracking-widest text-gray-400 hover:text-black transition-colors">PRIVACY</Link>
             <Link to="/terms" className="text-[11px] font-black uppercase tracking-widest text-gray-400 hover:text-black transition-colors">TERMS</Link>
+            <Link 
+              to="/deleteAccount" 
+              className="text-[11px] font-black uppercase tracking-widest text-red-400 hover:text-red-600 transition-colors"
+            >
+              DELETE ACCOUNT
+            </Link>
           </div>
 
           <p className="text-[10px] font-bold text-gray-300 uppercase tracking-widest">© 2024 COMO INC. ALL BETS ARE FINAL.</p>
